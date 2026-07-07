@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" herf="style.css">
-
+    <link rel="stylesheet" href="css/style.css">
     <!-- Google Fonts -->
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
 
@@ -14,35 +13,104 @@
 
 <body>
 
-</header>
-    <h1 id="titulo">Jennell</h1>
-    <p>Portafolio de Ilustración</p>
-</header>
+<header class="header">
+    <div class="logo">
+        <h1>Jennell</h1>
+    </div>
 
-<nav class="navbar">
-    <a href="#">Inicio</a>
-    <a href="#">Sobre mí</a>
-    <a href="#">Galería</a>
-    <a href="#">Proyectos</a>
-    <a href="#">Contacto</a>    
-</nav>
+    <nav class="navbar">
+        
+        <a href="index.html">Inicio</a>
+        <a href="sobremi.html">Sobre mí</a>
+        <a href="galeria.html">Galería</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
 
 <main>
-    <section>
-        <h2>Bienvenido a mi portafolio</h2>
+    <section class="hero">
+        <div class="hero-text">
+            <h2>PORTA<br>FOLIO</h2>
 
-        <p>
-            Soy estudiante de Diseño Gráfico con interés en la ilustración 
-            digital y los proyectos creativos. En este espacio voy a compartir 
-            una elección de mis trabajos, exploraciones visuales y proyectos 
-            desarrollados durantes mi formación académica.
-        </p>
+            <h3>Ilustración Digital</h3>
+
+            <p>
+                Creando personajes, mundos e historias a través de
+                la ilustración.
+            </p>
+
+            <a href="galeria.html" class="btn">
+                Ver Galería
+            </a>
+        </div>
+       
+        <div class="hero-image">
+             <img src="img/hero/portada.png" alt="Ilustración principal">
+        </div>
     </section>
+
+    <section class="about">
+        <div class="about-image">
+            <img src="img/hero/portada.png"
+            alt="Ilustración de Jennell">
+        </div>
+
+        <div class="about-text">
+            <span>SOBRE MÍ</span>
+            <h2>Hola, soy Jennell</h2>
+        <p>
+            Soy estudiante de diseño gráfico con interes en la ilustración
+            digital, el diseño de personajes y la creación de mundos visuales.
+            Disfruto explorando nuevas ideas y convertirlas en proyectos creativos
+            que transmitan emociones e historias.
+        </p>
+        <a href="sobremi.html" class="btn">
+            Conóceme
+        </a>
+        </div>
+
+    </section>
+
+    <section class="featured">
+        <h2>Trabajos Destacados</h2>
+        <div class="cards">
+            <article class="card">
+                <img src="img/galeria/obra1.png" alt="Ilustración 1">
+                <h3>Diseño de personaje</h3>
+
+                <p>
+                    Creación de personajes originales explorando formas,
+                    expresiones y personalidad.
+                </p>
+            </article>
+            <article class="card">
+                <img src="img/galeria/obra2.png" alt="Ilustración 2">
+                <h3>Fan Art</h3>
+
+                <p>
+                    Ilustraciones inspiradas en personajes de videojuegos
+                    y series animadas.
+                </p>
+            </article>
+
+            <article class="card">
+                <img src="img/galeria/obra3.png" alt="Ilustración 3">
+                <h3>Concept Art</h3>
+                <p>
+                    Exploración visual de escenarios, criaturas y mundos
+                    para proyectos creativos.
+                </p>
+            </article>
+        </div>
+    </section>
+
 </main>
 
-<footer>
-    <p>@ 2026 Jennell - Portafolio de Ilustración</p>
+<footer class="footer">
+    <h3>Jennell</h3>
+    <p>Portafolio de Ilustración</p>
+    <p>© 2026 Todos los derechos reservados.</p>
 </footer>
-
 </body>
 </html>
