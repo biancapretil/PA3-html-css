@@ -1,7 +1,7 @@
 :root{
-    --color-principal: #8b446c;
+    --color-principal: #6e3c43;
     --color-secundario: #681833;
-    --color-fondo: #f0e5e5;
+    --color-fondo: #8a7575;
     --color-texto: #000000;
 }
 *{
@@ -15,7 +15,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     background-color: var(--color-fondo);
     color: var(--color-texto);
-    padding: 15px;
+    padding: 0px;
 }
 
 header{
@@ -26,26 +26,70 @@ header{
     background-color: white;
 }
 
-.hero{
+.logo h1{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-principal);
+    font-size: 2rem;
+}
+
+.navbar{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 80px 60px;
-
-    min-height:80vh;
+    gap: 35px;
 }
 
+.navbar a{
+    color: var(--color-texto);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navar a:hover{
+    color: var(--color-principal);
+}
+
+.hero{
+    position:relative;
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    padding:80px 60px;
+    overflow:hidden;
+}
+
+.hero-image{
+    position:absolute;
+    inset:0;
+    z-index:0;
+}
+
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:70% center;
+}
+.hero-image::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0);
+}
 .hero-text{
-
-    width: 45%;
+    position:relative;
+    z-index:1;
+    width:45%;
+    padding-left:40px;
 }
 
+.hero-text h2,
+.hero-text h3,
+.hero-text p{
+    color:white;
+}
 .hero-text h2{
     font-size:6rem;
     line-height:0.9;
-    color:var(--color-text);
-
+    color: white;
 }
 
 .hero-text h3{
@@ -61,13 +105,17 @@ header{
 
 }
 
-.hero-image{
-    width:50%;
 
+.about-image{
+    width:35%;
+    display:flex;
+    justify-content:center;
 }
 
-.heroimagen img{
-    width:100%;
+.about-image img{
+    width:300px;
+    height:auto;
+    display:block;
 }
 
 .btn{
@@ -95,7 +143,7 @@ header{
     font-weight: 600;
     transition: 0.3s;
 }
-.navar a:hover{
+.navbar a:hover{
     color: var(--color-principal);
 }
 main{
@@ -115,10 +163,12 @@ main{
 .featured{
     padding:100px 60px;
     text-align:center;
+    background:#8a7575;
 }
 
 .featured h2{
     font-size:2.8rem;
+    color:white;
     margin-bottom:60px;
 
 }
@@ -181,20 +231,21 @@ footer{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:60px;
+    gap:100px;
 
 }
 
 .about-photo{
-
-    width:35%;
-
+    width:40%;
+    display:flex;
+    justify-content:center;
 }
 
 .about-photo img{
 
-    width:100%;
-    border-radius:50%;
+    width:320px;
+    max-width:100%;
+    height:auto;
 
 }
 
@@ -276,10 +327,10 @@ footer{
     max-width: 700px;
     margin: auto;
     line-height: 1.8;
-    color: #555;
+    color: #ffffff;
 }
 
-Galería
+/* Galería */
 .gallery{
 
     padding:80px 60px;
@@ -320,17 +371,33 @@ Galería
 
     width:100%;
 
-    height:280px;
+    height:350px;
 
     object-fit:cover;
 
 }
 
-.gallery-item h3{
-
-    text-align:center;
+.gallery-info{
 
     padding:20px;
+
+}
+
+
+.gallery-info h3{
+
+    color:var(--color-principal);
+
+    margin-bottom:10px;
+
+}
+
+
+.gallery-info p{
+
+    color:#333;
+
+    line-height:1.6;
 
 }
 
@@ -345,6 +412,10 @@ Galería
 
     gap:30px;
 
+}
+
+.project-card{
+    flex-wrap:wrap;
 }
 
 .project-card{
@@ -373,17 +444,44 @@ Galería
 
 }
 
-CONTACTO
+/* CONTACTO */
 
-.contact{
+.contact-form{
 
-    display:flex;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 
-    justify-content:space-between;
+}
+.contact-info h2{
 
-    gap:50px;
+    color:var(--color-principal);
+    font-size:2.5rem;
+    margin-bottom:20px;
 
-    padding:80px 60px;
+}
+
+
+.contact-info p{
+
+    line-height:1.8;
+
+}
+
+
+.contact-info ul{
+
+    list-style:none;
+    padding:0;
+    margin-top:25px;
+
+}
+
+
+.contact-info li{
+
+    margin-bottom:15px;
 
 }
 
@@ -391,18 +489,6 @@ CONTACTO
 
     width:40%;
     text-align:left;
-
-}
-
-.contact-form{
-
-    width:60%;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
 
 }
 
@@ -424,5 +510,199 @@ CONTACTO
     min-height:150px;
 
     resize:vertical;
+
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar-brand{
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-principal) !important;
+}
+
+.nav-link{
+    color: var(--color-texto) !important;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-link:hover{
+    color: var(--color-principal) !important;
+}
+
+.nav-link.active{
+    color: var(--color-principal) !important;
+    font-weight: 700;
+}
+
+.featured{
+    padding:100px 60px;
+    text-align:center;
+    background:#f0e5e5;
+}
+
+
+.featured h2{
+    font-size:3rem;
+    color:var(--color-secundario);
+    margin-bottom:15px;
+}
+
+
+.featured-subtitle{
+    margin-bottom:60px;
+    color:#f0e5e5;
+}
+
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+
+.card{
+
+    width:320px;
+    background:rgb(255, 255, 255);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+.card-image img{
+
+    width:100%;
+    height:250px;
+    object-fit:cover;
+
+}
+
+
+.card-content{
+
+    padding:25px;
+
+}
+
+
+.card-content h3{
+
+    color:#ffffff;
+    margin-bottom:15px;
+
+}
+
+
+.card-content p{
+
+    line-height:1.7;
+    color:#555;
+
+}
+
+
+.card-content a{
+
+    display:inline-block;
+    margin-top:15px;
+    color:var(--color-secundario);
+    font-weight:bold;
+
+}
+.project-card{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+.project-image img{
+    width:100%;
+    border-radius:15px;
+}
+
+
+.project-image img{
+
+    width:100%;
+
+    border-radius:15px;
+
+}
+
+
+.project-content{
+
+    width:80%;
+    text-align:center;
+
+}
+
+
+.project-content h2{
+
+    color:var(--color-principal);
+
+    margin-bottom:20px;
+
+}
+
+
+.project-content h3{
+
+    margin-top:25px;
+
+    color:var(--color-secundario);
+
+}
+
+
+.project-content p{
+
+    line-height:1.8;
+
+    color:#333;
+
+}
+.tags{
+    display:flex;
+    gap:10px;
+    margin:20px 0;
+}
+
+
+.tags span{
+
+    background:var(--color-fondo);
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-size:.9rem;
 
 }

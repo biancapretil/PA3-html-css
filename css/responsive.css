@@ -1,0 +1,190 @@
+/*Responsive*/
+
+@media(max-width:768px){
+
+
+/* GENERAL */
+
+body{
+    padding:0;
+}
+
+
+
+/* NAVBAR */
+
+.header{
+
+    flex-direction:column;
+    gap:20px;
+    padding:20px;
+
+}
+
+
+.navbar{
+
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+
+}
+
+/* HERO MOBILE */
+
+.hero{
+
+    flex-direction:column;
+    min-height:auto;
+    padding:50px 20px;
+    text-align:center;
+    gap:40px;
+
+}
+
+
+.hero-text{
+
+    width:100%;
+
+}
+
+
+.hero-text h2{
+
+    font-size:3rem;
+    line-height:0.95;
+
+}
+
+
+.hero-text h3{
+
+    font-size:1.6rem;
+
+}
+
+
+.hero-text p{
+
+    margin:20px auto;
+    max-width:350px;
+
+}
+
+
+.hero-image{
+
+    width:100%;
+
+}
+
+
+.hero-image img{
+
+    width:100%;
+    max-width:350px;
+    margin:auto;
+
+}
+
+
+/* SOBRE MI */
+
+.about{
+
+    flex-direction:column;
+    text-align:center;
+    padding:60px 20px;
+
+}
+
+
+.about-image{
+
+    width:100%;
+
+}
+
+
+
+/* PAGINA SOBRE MI */
+
+.about-container{
+
+    flex-direction:column;
+    gap:40px;
+
+}
+
+
+.about-photo,
+.about-info{
+
+    width:100%;
+
+}
+
+
+
+/* GALERIA */
+
+.gallery{
+
+    padding:50px 20px;
+
+}
+
+
+.gallery-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+/* PROYECTOS */
+
+.projects{
+
+    padding:50px 20px;
+
+}
+
+
+.project-card{
+
+    flex-direction:column;
+
+}
+
+
+.project-image,
+.project-content{
+
+    width:100%;
+
+}
+
+
+
+/* CONTACTO */
+
+.contact{
+
+    flex-direction:column;
+    padding:50px 20px;
+
+}
+
+
+.contact-info,
+.contact-form{
+
+    width:100%;
+
+}
+
+
+}
